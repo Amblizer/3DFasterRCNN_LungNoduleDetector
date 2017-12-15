@@ -7,7 +7,7 @@ This open-source project is developed by Shenzhen Yiyuan Intelligence Tech Co., 
 
 Authors
 ------------
-- WU Yu: tkots.wu@gmail.com
+- WU Yu
   - Co-founder of Shenzhen Yi-Yuan Intelligence Tech Co., LTD. Formerly with best ad’s pCTR team of Tencent.
   - Responsible for: model training, nodule-detecting framework constructing and overall optimizing strategy planning.
 - SHI Shaohuai
@@ -57,7 +57,6 @@ Test Set：python lungSeg.py testPath test_result_path
 ```
 Train Set：python make_label.py train
 Val Set：python make_label.py val
-Test Set：python make_label.py test
 ```
 Every patient may have 200-500 CT slides. All the slides are needed to do lung segmentation. The preprocessed CT slides of a patient are saved in one ``$patientID_clean.npy`` file, and its ground truth is saved as ``$patientID_label.npy``. The format of ``npy`` is a ``numpy`` array which is easy to read when training. The following example shows what the ``npy`` files look like:
 
@@ -122,6 +121,3 @@ The detected results are saved in the directory of `output/faster_rcnn_end2end/t
 Acknowledgements
 ----------------
 We would like to thank Alibaba to conduct the AI competition with valuable dataset. We also thank Intel technical support team in this Tianchi competition, and their provided high performance computing platforms including Intel Xeon Phi and Extended-Caffe. In addition, many thanks to the authors of [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) and [DSB2017](https://github.com/lfz/DSB2017).
-
-
-![](https://github.com/YiYuanIntelligent/3DFasterRCNN_LungNoduleDetector/blob/master/WechatIMG3.jpeg)
